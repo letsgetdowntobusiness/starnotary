@@ -3,17 +3,18 @@ pragma solidity >=0.4.24;
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
 
 contract StarNotary is ERC721 {
+    // Implement Task 1 Add a name and symbol properties
+    // name: Is a short name to your token
+    // symbol: Is a short string like 'USD' -> 'American Dollar'
+    string myname = "StarNotary";
+    string mysymbol = "SNT";
 
-    constructor() ERC721("YourStarName","YS") public {
+    constructor() ERC721(myname,mysymbol) public {
     }
 
     struct Star {
         string name;
     }
-
-    // Implement Task 1 Add a name and symbol properties
-    // name: Is a short name to your token
-    // symbol: Is a short string like 'USD' -> 'American Dollar'
     
     mapping(uint256 => Star) public tokenIdToStarInfo;
     mapping(uint256 => uint256) public starsForSale;
