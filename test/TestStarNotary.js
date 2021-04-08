@@ -86,8 +86,8 @@ it("can add the star name and star symbol properly", async () => {
   //2. Call the name and symbol properties in your Smart Contract and compare with the name and symbol provided
   const name = await instance.name();
   const symbol = await instance.symbol();
-  assert.equal("StarNotary", name);
-  assert.equal("SNT", symbol);
+  assert.equal("HaezlStarNotary", name);
+  assert.equal("HAEZLSNT", symbol);
 });
 
 it("lets 2 users exchange stars", async () => {
